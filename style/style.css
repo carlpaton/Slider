@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.cp-page-arrow {
+  background: rgba(255, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.cp-page-arrow-right:before,
+.cp-page-arrow-left:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-color: white;
+  border-style: solid;
+}
+
+.cp-page-arrow-right:before {
+  border-width: 0 5px 5px 0;
+  transform: rotate(-45deg) translate(-14.14%, -14.14%);
+}
+
+.cp-page-arrow-left:before {
+  border-width: 5px 0 0 5px;
+  transform: rotate(-45deg) translate(14.14%, 14.14%);
+}
+
+/*************************/
+/* override owl-carousel */
+/*************************/
+.owl-prev,
+.owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.owl-prev {
+  left: 0;
+}
+
+.owl-next {
+  right: 0;
+}
+
+.owl-theme .owl-nav [class*="owl-"]:hover {
+  background: none;
+}
+
+.owl-theme .owl-nav [class*="owl-"]:hover .cp-page-arrow {
+  background: rgba(255, 0, 0, .5);
+}
+
+.owl-carousel .owl-item img {
+  max-width: 100%;
+  max-height: 100vh;
+  width: auto;
+  margin: 0 auto;
+}
